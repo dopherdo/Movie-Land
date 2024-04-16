@@ -12,6 +12,3 @@ The backend utilized OMDb API to access a library of movies of all genres, inclu
 * Make the Art clickable hyperlink that will bring the user to a page with addtional information
 * * Additional Short Plot with a dropdown that then displays the Long Plot
 * * Still display the previous information but on a full page.
-
-
-
