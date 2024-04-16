@@ -136,10 +136,43 @@ h1 {
   top: 0;
   color: #f9d3b4;
 }
+@media (hover: hover) {
+  .movie:hover {
+    box-shadow: 0px 30px 18px -8px rgba(0, 0, 0, 0.1);
+    transform: scale(1.05, 1.05);
+  }
+  .movie:hover div:nth-of-type(2) {
+    height: 100%;
+    opacity: 0.3;
+  }
+  
+  .movie:hover div:nth-of-type(3) {
+    background-color: transparent;
+  }
+  
+  .movie:hover div:nth-of-type(1) {
+    opacity: 1;
+  }
+}
 
-.movie:hover {
-  box-shadow: 0px 30px 18px -8px rgba(0, 0, 0, 0.1);
-  transform: scale(1.05, 1.05);
+@media (hover: none) {
+  .movie-clicked {
+    box-shadow: 0px 30px 18px -8px rgba(0, 0, 0, 0.1);
+    transform: scale(1.05, 1.05);
+  }
+  
+  .movie-clicked div:nth-of-type(2) {
+    height: 100%;
+    opacity: 0.3;
+  }
+  
+  .movie-clicked div:nth-of-type(3) {
+    background-color: transparent;
+  }
+  
+  .movie-clicked div:nth-of-type(1) {
+    opacity: 1;
+  }
 }
 
 .movie div:nth-of-type(2) {
@@ -178,18 +211,7 @@ h1 {
   color: #f9d3b4;
 }
 
-.movie:hover div:nth-of-type(2) {
-  height: 100%;
-  opacity: 0.3;
-}
 
-.movie:hover div:nth-of-type(3) {
-  background-color: transparent;
-}
-
-.movie:hover div:nth-of-type(1) {
-  opacity: 1;
-}
 
 @media screen and (max-width: 600px) {
   .app {
