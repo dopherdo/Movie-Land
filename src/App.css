@@ -1,22 +1,27 @@
+/* Importing Google Fonts */
 @import url("https://fonts.googleapis.com/css?family=Roboto+Slab:100,300,400,700");
 @import url("https://fonts.googleapis.com/css?family=Raleway:300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i");
 
+/* Universal selector to reset margin, border, and set box-sizing to border-box */
 * {
   margin: 0;
   border: 0;
   box-sizing: border-box;
 }
 
+/* Root variables for font families */
 :root {
   --font-roboto: "Roboto Slab", serif;
   --font-raleway: "Raleway", sans-serif;
 }
 
+/* Body styles */
 body {
   font-family: var(--font-roboto);
   background-color: #212426;
 }
 
+/* Main container styles */
 .app {
   padding: 4rem;
 
@@ -26,6 +31,7 @@ body {
   flex-direction: column;
 }
 
+/* Header styles */
 h1 {
   font-size: 4rem;
   letter-spacing: 0.9px;
@@ -40,6 +46,7 @@ h1 {
   width: fit-content;
 }
 
+/* Search bar container styles */
 .search {
   width: 71%;
   margin: 4rem 0 2rem;
@@ -55,6 +62,7 @@ h1 {
   box-shadow: 5px 5px 7px #1c1d1f, -5px -5px 7px #222527;
 }
 
+/* Search input field styles */
 .search input {
   flex: 1;
   border: none;
@@ -68,27 +76,14 @@ h1 {
   background: #1f2123;
 }
 
+/* Search icon styles */
 .search img {
   width: 35px;
   height: 35px;
   cursor: pointer;
 }
 
-/* .search button {
-  padding: 20px 40px;
-  border-radius: 0.5rem;
-  margin-left: 15px;
-  color: #a1a1a1;
-  font-family: var(--font-raleway);
-  font-weight: 900;
-  letter-spacing: 0.75px;
-  font-size: 1.25rem;
-  cursor: pointer;
-  background: #1f2123;
-  -webkit-box-shadow: 5px 5px 7px #1c1d1f, -5px -5px 7px #222527;
-  box-shadow: 5px 5px 7px #1c1d1f, -5px -5px 7px #222527;
-} */
-
+/* Empty state container styles */
 .empty {
   width: 100%;
   margin-top: 3rem;
@@ -98,12 +93,14 @@ h1 {
   align-items: center;
 }
 
+/* Empty state message styles */
 .empty h2 {
   font-size: 1.25rem;
   color: #f9d3b4;
   font-family: var(--font-raleway);
 }
 
+/* Container for movie cards */
 .container {
   width: 100%;
   margin-top: 3rem;
@@ -114,6 +111,7 @@ h1 {
   flex-wrap: wrap;
 }
 
+/* Movie card styles */
 .movie {
   width: 310px;
   height: 460px;
@@ -128,6 +126,7 @@ h1 {
   box-shadow: 0px 13px 10px -7px rgba(0, 0, 0, 0.1);
 }
 
+/* First child element within movie card (e.g., overlay) */
 .movie div:nth-of-type(1) {
   position: absolute;
   padding: 16px;
@@ -136,6 +135,8 @@ h1 {
   top: 0;
   color: #f9d3b4;
 }
+
+/* Hover effect styles for movie card */
 @media (hover: hover) {
   .movie:hover {
     box-shadow: 0px 30px 18px -8px rgba(0, 0, 0, 0.1);
@@ -155,6 +156,7 @@ h1 {
   }
 }
 
+/* Click effect styles for non-hover devices */
 @media (hover: none) {
   .movie-clicked {
     box-shadow: 0px 30px 18px -8px rgba(0, 0, 0, 0.1);
@@ -175,16 +177,19 @@ h1 {
   }
 }
 
+/* Second child element within movie card (e.g., image container) */
 .movie div:nth-of-type(2) {
   width: 100%;
   height: 100%;
 }
 
+/* Image styles within movie card */
 .movie div:nth-of-type(2) img {
   height: 100%;
   width: 100%;
 }
 
+/* Third child element within movie card (e.g., text container) */
 .movie div:nth-of-type(3) {
   z-index: 2;
   background-color: #343739;
@@ -196,6 +201,7 @@ h1 {
   left: 0;
 }
 
+/* Span element styles within text container */
 .movie div:nth-of-type(3) span {
   font-family: "Raleway", sans-serif;
   text-transform: uppercase;
@@ -205,14 +211,14 @@ h1 {
   color: #f0f0f0;
 }
 
+/* Heading styles within text container */
 .movie div:nth-of-type(3) h3 {
   margin-top: 5px;
   font-family: "Roboto Slab", serif;
   color: #f9d3b4;
 }
 
-
-
+/* Responsive styles for screens smaller than 600px */
 @media screen and (max-width: 600px) {
   .app {
     padding: 4rem 2rem;
@@ -233,6 +239,7 @@ h1 {
   }
 }
 
+/* Responsive styles for screens smaller than 400px */
 @media screen and (max-width: 400px) {
   .app {
     padding: 4rem 1rem;
@@ -247,7 +254,7 @@ h1 {
   }
 
   .movie {
-    width: "100%";
+    width: 100%;
     margin: 1rem;
   }
 }

@@ -34,7 +34,7 @@ const App = () => {
         <input
           value={searchTerm}
           onChange={(e) => setSearchTerm(e.target.value)}
-          onKeyDown={handleKeyPress}
+          onKeyDown={handleKeyPress} 
           placeholder="Search for movies"
         />
         <img
