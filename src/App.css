@@ -156,6 +156,34 @@ h1 {
   }
 }
 
+/* Add this to your existing CSS */
+
+/* Watchlist button styles */
+.watchlist-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background-color: #ff4500; /* Adjust color as needed */
+  color: #fff;
+  padding: 5px 10px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  z-index: 10;
+  transition: opacity 0.3s ease;
+  display: none; /* Initially hide the button */
+}
+
+/* Adjust movie card styles for positioning */
+.movie {
+  position: relative;
+}
+
+/* Show the watchlist button when hovering over the movie card */
+.movie:hover .watchlist-btn {
+  display: block;
+}
+
 /* Click effect styles for non-hover devices */
 @media (hover: none) {
   .movie-clicked {
@@ -217,6 +245,11 @@ h1 {
   font-family: "Roboto Slab", serif;
   color: #f9d3b4;
 }
+
+
+
+
+
 
 /* Responsive styles for screens smaller than 600px */
 @media screen and (max-width: 600px) {
